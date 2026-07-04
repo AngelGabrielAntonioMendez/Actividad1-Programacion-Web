@@ -10,27 +10,31 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f2f4f7;
+            background-color: #0b0710;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
             margin: 0;
             padding: 40px 20px;
+            min-height: 100vh;
         }
 
-        .contenedor {
-            background-color: #ffffff;
-            padding: 30px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        .calculator-container {
+            background-color: #1a1025;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
             width: 100%;
-            max-width: 480px;
+            max-width: 420px;
+            border: 1px solid #332244;
         }
 
         h1 {
-            font-size: 22px;
+            margin-top: 0;
+            font-size: 1.5rem;
             text-align: center;
-            color: #2c3e50;
+            color: #ffffff;
             margin-bottom: 25px;
         }
 
@@ -40,24 +44,35 @@
         }
 
         li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+        }
+
+        li::marker {
+            color: #a395b0;
         }
 
         a {
-            color: #3498db;
+            display: block;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid #4a2e6b;
+            background-color: #261835;
+            color: #ffffff;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 0.95rem;
+            transition: border-color 0.3s, transform 0.2s;
         }
 
         a:hover {
-            text-decoration: underline;
-            color: #2980b9;
+            border-color: #9d4edd;
+            transform: scale(1.02);
+            color: #d946ef;
         }
     </style>
 </head>
 <body>
 
-    <div class="contenedor">
+    <div class="calculator-container">
         <h1>Índice de Ejercicios</h1>
         <ol>
             <li><a href="ejercicio1.html">Ejercicio 1 - Hola Mundo</a></li>
@@ -70,6 +85,11 @@
             <li><a href="ejercicio8.html">Ejercicio 8 - Horario Agosto-Diciembre 2025</a></li>
             <li><a href="ejercicio9.html">Ejercicio 9 - Contacto | DevSolutions</a></li>
             <li><a href="ejercicio10.html">Ejercicio 10 - Calculadora Celsius a Fahrenheit</a></li>
+            <li><a href="ejercicio11.html">Ejercicio 11 - Conversor de Km a Millas</a></li>
+            <li><a href="ejercicio12.html">Ejercicio 12 - Conversor de Divisas MXN a USD</a></li>
+            <li><a href="ejercicio13.html">Ejercicio 13 - ¿Puedo Votar?</a></li>
+            <li><a href="ejercicio14.html">Ejercicio 14 - Mayor, Menor y Promedio</a></li>
+            <li><a href="ejercicio15.html">Ejercicio 15 - Estudiantes y Calificaciones</a></li>
         </ol>
     </div>
 
