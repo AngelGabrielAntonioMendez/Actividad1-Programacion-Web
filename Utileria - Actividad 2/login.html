@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h2 id="formTitulo">Registro de usuario</h2>
+
+        <form id="loginForm" novalidate>
+            <div class="input-group">
+                <label for="nombreInput">Nombre completo</label>
+                <input type="text" id="nombreInput" placeholder="Ej. Juan Pérez">
+            </div>
+
+            <div class="input-group">
+                <label for="correoInput">Correo electrónico</label>
+                <input type="email" id="correoInput" placeholder="Ej. juan@correo.com">
+            </div>
+
+            <div class="input-group">
+                <label for="telefonoInput">Teléfono (10 dígitos)</label>
+                <input type="tel" id="telefonoInput" maxlength="10" placeholder="Ej. 9511234567">
+            </div>
+
+            <div class="input-group">
+                <label for="passwordInput">Contraseña</label>
+                <input type="password" id="passwordInput" placeholder="Mínimo 8 caracteres">
+            </div>
+
+            <div class="input-group">
+                <label for="fechaInput">Fecha de nacimiento</label>
+                <input type="date" id="fechaInput">
+            </div>
+
+            <div class="error-message" id="errorMsg"></div>
+
+            <button type="submit" class="btn-convertir">Validar y registrar</button>
+        </form>
+
+        <button type="button" class="btn-convertir btn-secundario" id="mostrarAccesoBtn">Acceder al login</button>
+
+        <form id="accesoForm" novalidate class="oculto">
+            <div class="input-group">
+                <label for="accesoIdentificador">Correo o teléfono</label>
+                <input type="text" id="accesoIdentificador" placeholder="correo@ejemplo.com o 10 dígitos">
+            </div>
+
+            <div class="input-group">
+                <label for="accesoPassword">Contraseña</label>
+                <input type="password" id="accesoPassword" placeholder="Tu contraseña">
+            </div>
+
+            <div class="error-message" id="accesoErrorMsg"></div>
+
+            <button type="submit" class="btn-convertir">Entrar</button>
+            <button type="button" class="btn-convertir btn-secundario" id="volverRegistroBtn">Volver al registro</button>
+        </form>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-cerrar" id="cerrarModalBtn" aria-label="Cerrar">&times;</button>
+            <h2>¡Registro exitoso!</h2>
+            <div class="modal-dato">
+                <span class="modal-etiqueta">Nombre</span>
+                <span class="modal-valor" id="modalNombre"></span>
+            </div>
+            <div class="modal-dato">
+                <span class="modal-etiqueta">Edad calculada</span>
+                <span class="modal-valor modal-edad" id="modalEdad"></span>
+            </div>
+            <div class="modal-dato">
+                <span class="modal-etiqueta">Fecha de nacimiento</span>
+                <span class="modal-valor" id="modalFecha"></span>
+            </div>
+            <div class="modal-dato">
+                <span class="modal-etiqueta">Correo</span>
+                <span class="modal-valor" id="modalCorreo"></span>
+            </div>
+            <div class="modal-dato">
+                <span class="modal-etiqueta">Teléfono</span>
+                <span class="modal-valor" id="modalTelefono"></span>
+            </div>
+            <button type="button" class="btn-convertir" id="irInicioBtn">Ir al inicio</button>
+        </div>
+    </div>
+
+    <script src="js/utileria.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
