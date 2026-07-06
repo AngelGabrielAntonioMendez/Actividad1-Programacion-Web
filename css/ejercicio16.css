@@ -1,4 +1,3 @@
-/* Reset y estilos generales */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +18,6 @@ body {
         radial-gradient(at 100% 100%, rgba(217, 70, 239, 0.1) 0px, transparent 50%);
 }
 
-/* Contenedor de la calculadora */
 .calculator-card {
     background-color: #1a1025;
     padding: 35px 30px;
@@ -32,7 +30,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Encabezado */
 .calculator-header {
     position: relative;
     margin-bottom: 25px;
@@ -76,7 +73,7 @@ h1 {
     font-size: 1.6rem;
     font-weight: 700;
     color: #ffffff;
-    margin-top: 45px; /* Deja espacio para el botón volver en móvil */
+    margin-top: 45px;
 }
 
 .subtitle {
@@ -85,7 +82,6 @@ h1 {
     margin-top: 4px;
 }
 
-/* Campos de entrada */
 .input-group {
     margin-bottom: 20px;
     text-align: left;
@@ -129,7 +125,6 @@ h1 {
     color: #635075;
 }
 
-/* Cuadrícula de operaciones */
 .operations-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -137,7 +132,6 @@ h1 {
     margin: 25px 0;
 }
 
-/* Botones de operación */
 .btn-op {
     display: flex;
     align-items: center;
@@ -161,7 +155,6 @@ h1 {
     line-height: 1;
 }
 
-/* Estilos individuales de botones con gradientes modernos */
 .btn-suma {
     background: linear-gradient(135deg, #4776e6, #8e54e9);
 }
@@ -203,14 +196,12 @@ h1 {
     opacity: 0.9;
 }
 
-/* Divisor */
 .divider {
     border: none;
     border-top: 1px solid #332244;
     margin: 25px 0;
 }
 
-/* Resultado */
 .result-group label {
     color: #4ade80;
 }
@@ -226,7 +217,6 @@ h1 {
     text-align: center;
 }
 
-/* Personalización de SweetAlert2 en tema oscuro */
 .swal2-custom-popup {
     font-family: 'Outfit', sans-serif !important;
     border-radius: 20px !important;
@@ -234,7 +224,6 @@ h1 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Responsividad para móviles */
 @media (max-width: 480px) {
     .calculator-card {
         padding: 25px 20px;

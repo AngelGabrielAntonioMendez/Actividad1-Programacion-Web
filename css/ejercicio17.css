@@ -1,4 +1,3 @@
-/* Reset y estilos generales */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +18,6 @@ body {
         radial-gradient(at 100% 100%, rgba(217, 70, 239, 0.1) 0px, transparent 50%);
 }
 
-/* Contenedor principal */
 .app-container {
     width: 100%;
     max-width: 600px;
@@ -28,7 +26,6 @@ body {
     gap: 25px;
 }
 
-/* Encabezado */
 .app-header {
     position: relative;
     text-align: center;
@@ -72,7 +69,7 @@ h1 {
     font-size: 2rem;
     font-weight: 700;
     color: #ffffff;
-    margin-top: 45px; /* Margen para el botón volver en móvil */
+    margin-top: 45px;
     background: linear-gradient(135deg, #ffffff, #d946ef);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -84,7 +81,6 @@ h1 {
     margin-top: 6px;
 }
 
-/* Tarjetas (Cards) */
 .card {
     background-color: #1a1025;
     padding: 25px;
@@ -109,7 +105,6 @@ h1 {
     font-size: 1.4rem;
 }
 
-/* Inputs y Formulario */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -153,7 +148,6 @@ h1 {
     color: #635075;
 }
 
-/* Botones */
 .btn {
     padding: 12px 24px;
     border: none;
@@ -183,7 +177,6 @@ h1 {
     transform: translateY(1px);
 }
 
-/* Listado de tareas */
 .list-header {
     display: flex;
     justify-content: space-between;
@@ -216,7 +209,6 @@ h1 {
     padding-right: 4px;
 }
 
-/* Estilo para la barra de desplazamiento (Scrollbar) */
 .tasks-container::-webkit-scrollbar {
     width: 6px;
 }
@@ -235,7 +227,6 @@ h1 {
     background: #9d4edd;
 }
 
-/* Tarea individual */
 .task-item {
     display: flex;
     justify-content: space-between;
@@ -293,7 +284,6 @@ h1 {
     transform: scale(0.95);
 }
 
-/* Estado Vacío */
 .empty-state {
     text-align: center;
     padding: 30px 20px;
@@ -304,7 +294,6 @@ h1 {
     background-color: #140c1c;
 }
 
-/* Pestañas de Explicación Académica */
 .tabs-container {
     display: flex;
     flex-direction: column;
@@ -392,7 +381,6 @@ code {
     color: #4ade80;
 }
 
-/* Animaciones */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -413,7 +401,6 @@ code {
     }
 }
 
-/* Personalización de SweetAlert2 en tema oscuro */
 .swal2-custom-popup {
     font-family: 'Outfit', sans-serif !important;
     border-radius: 20px !important;
@@ -423,7 +410,6 @@ code {
     color: #ffffff !important;
 }
 
-/* Responsividad */
 @media (max-width: 480px) {
     body {
         padding: 20px 10px;
