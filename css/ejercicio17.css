@@ -1,0 +1,449 @@
+/* Reset y estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0710;
+    color: #ffffff;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(107, 33, 168, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(217, 70, 239, 0.1) 0px, transparent 50%);
+}
+
+/* Contenedor principal */
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Encabezado */
+.app-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a395b0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 1px solid #332244;
+    background-color: #140c1c;
+    transition: all 0.2s ease;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.back-link svg {
+    transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+    color: #d946ef;
+    border-color: #9d4edd;
+    background-color: #261835;
+}
+
+.back-link:hover svg {
+    transform: translateX(-3px);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 45px; /* Margen para el botón volver en móvil */
+    background: linear-gradient(135deg, #ffffff, #d946ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #a395b0;
+    margin-top: 6px;
+}
+
+/* Tarjetas (Cards) */
+.card {
+    background-color: #1a1025;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 
+                0 0 2px rgba(157, 78, 221, 0.2) inset;
+    border: 1px solid #332244;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    font-size: 1.4rem;
+}
+
+/* Inputs y Formulario */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #a395b0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.input-wrapper input {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid #4a2e6b;
+    background-color: #261835;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    border-color: #d946ef;
+    box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #2b1c3c;
+}
+
+.input-wrapper input::placeholder {
+    color: #635075;
+}
+
+/* Botones */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-add {
+    background: linear-gradient(135deg, #8e54e9, #d946ef);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(217, 70, 239, 0.25);
+}
+
+.btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(217, 70, 239, 0.4);
+}
+
+.btn-add:active {
+    transform: translateY(1px);
+}
+
+/* Listado de tareas */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #332244;
+    padding-bottom: 12px;
+}
+
+.list-header h2 {
+    margin-bottom: 0;
+}
+
+.badge {
+    background-color: #2a1b3d;
+    color: #d946ef;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #4a2e6b;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Estilo para la barra de desplazamiento (Scrollbar) */
+.tasks-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tasks-container::-webkit-scrollbar-track {
+    background: #140c1c;
+    border-radius: 4px;
+}
+
+.tasks-container::-webkit-scrollbar-thumb {
+    background: #4a2e6b;
+    border-radius: 4px;
+}
+
+.tasks-container::-webkit-scrollbar-thumb:hover {
+    background: #9d4edd;
+}
+
+/* Tarea individual */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background-color: #221433;
+    border: 1px solid #3d235c;
+    border-radius: 14px;
+    transition: all 0.2s ease;
+    animation: slideIn 0.3s ease forwards;
+}
+
+.task-item:hover {
+    border-color: #9d4edd;
+    background-color: #27173b;
+    transform: translateX(4px);
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.task-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #ffffff;
+    word-break: break-word;
+}
+
+.task-date {
+    font-size: 0.75rem;
+    color: #a395b0;
+}
+
+.btn-delete {
+    background-color: #2a1420;
+    color: #ff5858;
+    border: 1px solid #5c2020;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.btn-delete:hover {
+    background-color: #ff5858;
+    color: #ffffff;
+    border-color: #ff5858;
+    box-shadow: 0 4px 12px rgba(255, 88, 88, 0.25);
+    transform: scale(1.05);
+}
+
+.btn-delete:active {
+    transform: scale(0.95);
+}
+
+/* Estado Vacío */
+.empty-state {
+    text-align: center;
+    padding: 30px 20px;
+    color: #a395b0;
+    font-size: 0.95rem;
+    border: 1px dashed #4a2e6b;
+    border-radius: 14px;
+    background-color: #140c1c;
+}
+
+/* Pestañas de Explicación Académica */
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #332244;
+    padding-bottom: 10px;
+    overflow-x: auto;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #a395b0;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: #ffffff;
+    background-color: #261835;
+}
+
+.tab-btn.active {
+    color: #ffffff;
+    background-color: #4a2e6b;
+    font-weight: 600;
+}
+
+.tab-panel {
+    display: none;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.tab-panel h3 {
+    font-size: 1.05rem;
+    color: #d946ef;
+    margin-bottom: 8px;
+}
+
+.tab-panel p {
+    font-size: 0.9rem;
+    color: #a395b0;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.tab-panel ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #a395b0;
+    line-height: 1.5;
+}
+
+.tab-panel li {
+    margin-bottom: 6px;
+}
+
+pre {
+    background-color: #0e0714;
+    border: 1px solid #332244;
+    border-radius: 10px;
+    padding: 12px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #4ade80;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Personalización de SweetAlert2 en tema oscuro */
+.swal2-custom-popup {
+    font-family: 'Outfit', sans-serif !important;
+    border-radius: 20px !important;
+    border: 1px solid #332244 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+    background-color: #1a1025 !important;
+    color: #ffffff !important;
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    h1 {
+        margin-top: 50px;
+        font-size: 1.6rem;
+    }
+    
+    .back-link {
+        top: 15px;
+        transform: none;
+    }
+    
+    .input-wrapper {
+        flex-direction: column;
+    }
+    
+    .btn-add {
+        width: 100%;
+    }
+}

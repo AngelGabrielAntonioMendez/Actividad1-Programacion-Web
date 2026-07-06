@@ -1,0 +1,256 @@
+/* Reset y estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0710;
+    color: #ffffff;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(107, 33, 168, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(217, 70, 239, 0.1) 0px, transparent 50%);
+}
+
+/* Contenedor de la calculadora */
+.calculator-card {
+    background-color: #1a1025;
+    padding: 35px 30px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 2px rgba(157, 78, 221, 0.2) inset;
+    width: 100%;
+    max-width: 440px;
+    border: 1px solid #332244;
+    transition: transform 0.3s ease;
+}
+
+/* Encabezado */
+.calculator-header {
+    position: relative;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a395b0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 1px solid #332244;
+    background-color: #140c1c;
+    transition: all 0.2s ease;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.back-link svg {
+    transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+    color: #d946ef;
+    border-color: #9d4edd;
+    background-color: #261835;
+}
+
+.back-link:hover svg {
+    transform: translateX(-3px);
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 45px; /* Deja espacio para el botón volver en móvil */
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #a395b0;
+    margin-top: 4px;
+}
+
+/* Campos de entrada */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #a395b0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid #4a2e6b;
+    background-color: #261835;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    border-color: #d946ef;
+    box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #2b1c3c;
+}
+
+.input-wrapper input::placeholder {
+    color: #635075;
+}
+
+/* Cuadrícula de operaciones */
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+/* Botones de operación */
+.btn-op {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 16px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Estilos individuales de botones con gradientes modernos */
+.btn-suma {
+    background: linear-gradient(135deg, #4776e6, #8e54e9);
+}
+
+.btn-suma:hover {
+    box-shadow: 0 0 15px rgba(142, 84, 233, 0.4);
+}
+
+.btn-resta {
+    background: linear-gradient(135deg, #f857a6, #ff5858);
+}
+
+.btn-resta:hover {
+    box-shadow: 0 0 15px rgba(248, 87, 166, 0.4);
+}
+
+.btn-multiplica {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.btn-multiplica:hover {
+    box-shadow: 0 0 15px rgba(56, 239, 125, 0.4);
+}
+
+.btn-divide {
+    background: linear-gradient(135deg, #f12711, #f5af19);
+}
+
+.btn-divide:hover {
+    box-shadow: 0 0 15px rgba(245, 175, 25, 0.4);
+}
+
+.btn-op:hover {
+    transform: translateY(-2px);
+}
+
+.btn-op:active {
+    transform: translateY(1px);
+    opacity: 0.9;
+}
+
+/* Divisor */
+.divider {
+    border: none;
+    border-top: 1px solid #332244;
+    margin: 25px 0;
+}
+
+/* Resultado */
+.result-group label {
+    color: #4ade80;
+}
+
+.result-group input[readonly] {
+    background-color: #0e0714;
+    color: #4ade80;
+    border: 1px dashed #4ade80;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    cursor: not-allowed;
+    text-align: center;
+}
+
+/* Personalización de SweetAlert2 en tema oscuro */
+.swal2-custom-popup {
+    font-family: 'Outfit', sans-serif !important;
+    border-radius: 20px !important;
+    border: 1px solid #332244 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 25px 20px;
+    }
+    
+    h1 {
+        margin-top: 50px;
+        font-size: 1.4rem;
+    }
+    
+    .back-link {
+        top: 20px;
+        transform: none;
+    }
+    
+    .operations-grid {
+        grid-template-columns: 1fr;
+    }
+}

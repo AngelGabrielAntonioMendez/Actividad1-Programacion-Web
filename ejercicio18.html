@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulación del DOM - Ejercicio 18</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts - Outfit -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/ejercicio18.css">
+</head>
+<body>
+
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        
+        <!-- Header -->
+        <div class="position-relative text-center mb-5 mt-3">
+          <a href="index.html" class="back-link position-absolute start-0 top-50 translate-middle-y d-none d-sm-inline-flex">
+            <i class="bi bi-arrow-left-short fs-5"></i> Volver
+          </a>
+          <h1 class="gradient-title mb-1">Lista Dinámica</h1>
+          <p class="text-muted mb-0 small">Manipulación del DOM y Bootstrap</p>
+        </div>
+
+        <!-- Main Card -->
+        <div class="card border-0 p-4 p-sm-5 mb-4">
+          
+          <!-- Form Input Group -->
+          <div class="mb-4">
+            <label for="nuevoElemento" class="form-label fw-semibold text-secondary small text-uppercase tracking-wider">Nuevo Elemento</label>
+            <div class="input-group">
+              <input type="text" id="nuevoElemento" class="form-control" placeholder="Escribe algo para agregar..." aria-label="Escribe algo para agregar">
+              <button class="btn btn-agregar px-4" type="button" id="agregarBtn">
+                <i class="bi bi-plus-lg me-1"></i> Agregar
+              </button>
+            </div>
+          </div>
+
+          <!-- List Section -->
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+              <h5 class="fw-semibold text-white mb-0">Elementos de la Lista</h5>
+              <span id="contadorElementos" class="badge badge-contador">0 elementos</span>
+            </div>
+
+            <!-- Empty State Alert -->
+            <div id="emptyState" class="empty-state">
+              <i class="bi bi-info-circle text-muted fs-4 mb-2 d-block"></i>
+              <p class="mb-0 small text-muted">No hay elementos en la lista. ¡Escribe algo arriba!</p>
+            </div>
+
+            <!-- Dynamic List -->
+            <ul id="lista" class="list-unstyled mb-0">
+              <!-- Elements will be added dynamically here -->
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Back link for mobile screens where absolute positioning might overlap -->
+        <div class="text-center d-block d-sm-none mt-3">
+          <a href="index.html" class="back-link">
+            <i class="bi bi-arrow-left-short fs-5"></i> Volver al Inicio
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/ejercicio18.js"></script>
+</body>
+</html>

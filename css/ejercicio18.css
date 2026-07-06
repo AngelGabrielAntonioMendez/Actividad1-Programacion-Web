@@ -1,0 +1,172 @@
+/* Reset y estilos generales */
+body {
+    background-color: #0b0710;
+    color: #ffffff;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(107, 33, 168, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(217, 70, 239, 0.1) 0px, transparent 50%);
+}
+
+.gradient-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #d946ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card {
+    background-color: #1a1025 !important;
+    border: 1px solid #332244 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+        0 0 2px rgba(157, 78, 221, 0.2) inset !important;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a395b0;
+    text-decoration: none !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 1px solid #332244;
+    background-color: #140c1c;
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    color: #d946ef;
+    border-color: #9d4edd;
+    background-color: #261835;
+}
+
+.form-control {
+    padding: 12px 16px;
+    border-radius: 14px 0 0 14px !important;
+    border: 1px solid #4a2e6b !important;
+    background-color: #261835 !important;
+    color: #ffffff !important;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #635075;
+}
+
+.form-control:focus {
+    border-color: #d946ef !important;
+    box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    background-color: #2b1c3c !important;
+}
+
+.btn-agregar {
+    background: linear-gradient(135deg, #8e54e9, #d946ef) !important;
+    border: none !important;
+    color: #ffffff !important;
+    border-radius: 0 14px 14px 0 !important;
+    font-weight: 600 !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 12px rgba(217, 70, 239, 0.25) !important;
+}
+
+.btn-agregar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(217, 70, 239, 0.4) !important;
+}
+
+.btn-agregar:active {
+    transform: translateY(1px);
+}
+
+.badge-contador {
+    background-color: #2a1b3d !important;
+    color: #d946ef !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    border: 1px solid #4a2e6b !important;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px 20px;
+    color: #a395b0;
+    font-size: 0.95rem;
+    border: 1px dashed #4a2e6b !important;
+    border-radius: 14px;
+    background-color: #140c1c;
+}
+
+.elemento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px !important;
+    background-color: #221433 !important;
+    border: 1px solid #3d235c !important;
+    border-radius: 14px !important;
+    transition: all 0.2s ease !important;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.elemento:hover {
+    border-color: #9d4edd !important;
+    background-color: #27173b !important;
+    transform: translateX(4px);
+}
+
+.btn-eliminar {
+    background-color: #2a1420 !important;
+    color: #ff5858 !important;
+    border: 1px solid #5c2020 !important;
+    padding: 8px 14px !important;
+    border-radius: 10px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+.btn-eliminar:hover {
+    background-color: #ff5858 !important;
+    color: #ffffff !important;
+    border-color: #ff5858 !important;
+    box-shadow: 0 4px 12px rgba(255, 88, 88, 0.25) !important;
+    transform: scale(1.05);
+}
+
+.btn-eliminar:active {
+    transform: scale(0.95);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.elemento.removing {
+    animation: slideOut 0.3s forwards;
+}
+
+@keyframes slideOut {
+    to {
+        opacity: 0;
+        transform: scale(0.95) translateY(-5px);
+    }
+}
